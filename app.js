@@ -12,8 +12,8 @@ console.log(validator.isURL('https://qq.com'))
 
 
 console.log(chalk.bold.green.inverse('Success!'));
-console.log(chalk.red.bold('fail!'));
-console.log(chalk.bold.blue.underline.inverse('yeah'));
+console.log(chalk.inverse.red.bold('fail!'));
+console.log(chalk.bold.yellow.underline.inverse('yeah'));
 
 
 
