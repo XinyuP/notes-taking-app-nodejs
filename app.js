@@ -3,6 +3,11 @@ const chalk = require('chalk');
 const yargs = require('yargs')
 const notes = require('./notes.js')
 
+// refactor all functions to arrow function
+// 1. if function is a method, use ES6 method definition syntax
+// 2. otherwise, use most concise arrow function 
+// 3. Test
+
 
 // add, remove, read, list 
 
@@ -22,7 +27,7 @@ yargs.command({
             type: 'string'
         }
     },
-    handler: function(argv) {
+    handler(argv) {
         notes.addNotes(argv.title, argv.body)
     }
 
@@ -39,7 +44,7 @@ yargs.command({
             type: 'string'
         }  
     }, 
-    handler: function(argv) {
+    handler(argv) {
         notes.removeNotes(argv.title)
     }
 
@@ -49,7 +54,7 @@ yargs.command({
 yargs.command({
     command: 'read',
     describe: 'Read a note',
-    handler: function() {
+    handler() {
         console.log('Reading a note!!!')
     }
 
@@ -59,7 +64,7 @@ yargs.command({
 yargs.command({
     command: 'list',
     describe: 'List your notes',
-    handler: function() {
+    handler() {
         console.log('Listing all note!!!')
     }
 
