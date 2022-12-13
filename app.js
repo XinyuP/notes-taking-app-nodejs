@@ -1,17 +1,76 @@
 var validator = require('validator');
 const chalk = require('chalk');
+const yargs = require('yargs')
 
 
-const command = process.argv[2]
-console.log(process.argv)
+// add, remove, read, list 
+
+// Creare add command
+yargs.command({
+    command: 'add',
+    describe: 'Add a new note',
+    handler: function() {
+        console.log('Adding a new note!!!')
+    }
+
+})
+
+// Creare remove command
+yargs.command({
+    command: 'remove',
+    describe: 'Remove a note',
+    handler: function() {
+        console.log('Removing a note!!!')
+    }
+
+})
+
+// Creare read command
+yargs.command({
+    command: 'read',
+    describe: 'Read a note',
+    handler: function() {
+        console.log('Reading a note!!!')
+    }
+
+})
+
+// Creare list command
+yargs.command({
+    command: 'list',
+    describe: 'List your notes',
+    handler: function() {
+        console.log('Listing all note!!!')
+    }
+
+})
+
+//console.log(process.argv)
+console.log(yargs.argv)
 
 
-if (command === 'add') {
-    console.log('Adding note!')
-}
-else if (command === 'remove') {
-    console.log('Removing note!')
-}
+
+
+
+
+
+
+
+
+
+
+
+
+// const command = process.argv[2]
+// console.log(process.argv)
+
+
+// if (command === 'add') {
+//     console.log('Adding note!')
+// }
+// else if (command === 'remove') {
+//     console.log('Removing note!')
+// }
 
 
 
