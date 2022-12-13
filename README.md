@@ -39,7 +39,3 @@ Yargs helps you build interactive command line tools, by parsing arguments and g
 It gives you:
 commands and (grouped) options (my-program.js serve --port=5000).
 a dynamically generated help menu based on your arguments
-<<<<<<< HEAD
-=======
-
->>>>>>> 153df5ceeab61b4e21c35441b0ec5fc47038a201
