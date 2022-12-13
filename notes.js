@@ -1,5 +1,5 @@
-const getNodes = function() {
+const getNotes = function() {
     return "Your notes...."
 }
 
-module.exports = getNodes
+module.exports = getNotes
