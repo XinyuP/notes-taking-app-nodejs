@@ -50,26 +50,27 @@ yargs.command({
 
 })
 
-// Creare read command
-yargs.command({
-    command: 'read',
-    describe: 'Read a note',
-    handler() {
-        console.log('Reading a note!!!')
-    }
 
-})
 
 // Creare list command
 yargs.command({
     command: 'list',
     describe: 'List your notes',
     handler() {
-        console.log('Listing all note!!!')
+        notes.listNotes()
+    }
+})
+
+
+// Creare read command
+yargs.command({
+    command: 'read',
+    describe: 'Read a note',
+    handler() {
+        
     }
 
 })
-
 //console.log(process.argv)
 yargs.parse()
 //console.log(yargs.argv)

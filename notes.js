@@ -56,8 +56,19 @@ const loadNotes = () => {
 	}
 };
 
+
+const listNotes = () => {
+    const notes = loadNotes()
+    console.log(chalk.bgGreen('Listing all note!'))
+    notes.forEach((note) => {
+		console.log(chalk.red(note.title));
+	});
+}
+
 module.exports = {
     getNodes: getNodes,
 	addNotes: addNotes,
-	removeNotes: removeNotes,
+    removeNotes: removeNotes,
+    listNotes: listNotes
 };
+
