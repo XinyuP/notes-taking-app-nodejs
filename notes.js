@@ -7,10 +7,11 @@ const getNodes = () => {
 
 const addNotes = (title, body) => {
 	const notes = loadNotes();
+    //const duplicateNotes = notes.filter(note => note.title === title);
+    const duplicateNote = notes.find(note => note.title === title); // return undefined if no match
 
-	const duplicateNotes = notes.filter(note => note.title === title);
-
-	if (duplicateNotes.length === 0) {
+	// if (duplicateNotes.length === 0) {
+    if (!duplicateNote) {
 		notes.push({
 			title: title,
 			body: body,
